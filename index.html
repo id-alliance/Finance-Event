@@ -110,29 +110,42 @@
     </table>
 
     <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            setTimeout(function () {
-                if (confirm("Would you like to copy the entire page content (with formatting and images) to your clipboard?\nYou can then paste it directly into your email.")) {
-                    const elementToCopy = document.body; 
-                    const htmlContent = elementToCopy.innerHTML;
+  window.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+      if (confirm("Would you like to copy the entire page content (with formatting and images) to your clipboard?\nYou can then paste it directly into your email.")) {
 
-                    try {
-                        const blob = new Blob([htmlContent], { type: 'text/html' });
-                        const clipboardItem = new ClipboardItem({ 'text/html': blob });
+        const elementToCopy = document.body;
+        let htmlContent = elementToCopy.outerHTML; // Use outerHTML to include the body tag itself
 
-                        navigator.clipboard.write([clipboardItem]).then(function() {
-                            alert("Entire page content copied with formatting! You can now paste it into your email.");
-                        }).catch(function(err) {
-                            console.error('Failed to copy HTML to clipboard: ', err);
-                            alert("Sorry, couldn't automatically copy the page content with formatting. You might need to manually select everything (Ctrl+A or Cmd+A) and copy (Ctrl+C or Cmd+C).");
-                        });
-                    } catch (error) {
-                        console.error('Error preparing content for clipboard: ', error);
-                        alert("Sorry, your browser might not support copying rich content this way. Please manually select everything (Ctrl+A or Cmd+A) and copy (Ctrl+C or Cmd+C).");
-                    }
-                }
-            }, 1000);
+        // Get all <style> tags from the head
+        const styleTags = document.head.querySelectorAll('style');
+        let styleContent = '';
+        styleTags.forEach(style => {
+          styleContent += style.textContent + '\n';
         });
-    </script>
+
+        // Prepend a <style> block to the HTML content (if there are styles)
+        if (styleContent) {
+          htmlContent = `<style>\n${styleContent}\n</style>\n${htmlContent}`;
+        }
+
+        try {
+          const blob = new Blob([htmlContent], { type: 'text/html' });
+          const clipboardItem = new ClipboardItem({ 'text/html': blob });
+
+          navigator.clipboard.write([clipboardItem]).then(function() {
+            alert("Entire page content copied with some formatting! Please note that email clients have varying support for styles. You can now try pasting it into your email.");
+          }).catch(function(err) {
+            console.error('Failed to copy HTML to clipboard: ', err);
+            alert("Sorry, couldn't automatically copy the page content with formatting. You might need to manually select everything (Ctrl+A or Cmd+A) and copy (Ctrl+C or Cmd+C).");
+          });
+        } catch (error) {
+          console.error('Error preparing content for clipboard: ', error);
+          alert("Sorry, your browser might not support copying rich content this way. Please manually select everything (Ctrl+A or Cmd+A) and copy (Ctrl+C or Cmd+C).");
+        }
+      }
+    }, 1000);
+  });
+</script>
 </body>
 </html>
