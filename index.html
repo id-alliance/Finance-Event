@@ -4,59 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join Us at World Health Assembly (WHA78)</title>
-    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet" type="text/css">
     <style>
         body {
-            font-family: 'Merriweather', 'Georgia', serif;
-            background-color: #1c0bb1; /* Blue background */
             margin: 0;
             padding: 0;
-            text-align: center; /* Center-align all text */
+            background-color: #1c0bb1; /* Blue background */
         }
-        .container {
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        .content {
             max-width: 640px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #f5f3ef; /* White-ish box */
+            margin: 0 auto;
+            background-color: #f5f3ef; /* White-ish box background */
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h1, h2, p, ul {
+            margin: 0;
+            padding: 10px;
+            font-family: Merriweather, Georgia, serif;
+            text-align: center; /* Center text */
         }
         h1 {
-            font-size: 30px; /* Title proportion */
+            font-size: 28px;
             color: #000000;
         }
-        .subtitle {
-            font-size: 24px; /* Subtitle text */
+        h2 {
+            font-size: 22px;
             font-weight: bold;
             color: #000000;
         }
         p {
-            font-size: 18px; /* Paragraph text */
+            font-size: 16px;
             color: #555555;
-            padding: 0 20px; /* Padding to align with image */
+            padding: 0 40px; /* Padding to align with image */
+            margin-bottom: 20px; /* Increased spacing between paragraphs */
         }
         ul {
-            font-size: 18px; /* List text */
+            font-size: 16px;
             color: #555555;
-            text-align: left;
-            display: inline-block;
-            padding: 0 20px; /* Padding to align with image */
+            padding: 0 40px; /* Padding to align with image */
+            text-align: left; /* Left-align lists */
         }
-        .image {
-            width: 85%; /* Slightly smaller image */
-            height: auto;
+        ul.no-bullet {
+            list-style-type: none; /* Remove bullet points */
+        }
+        img {
+            width: 85%;
+            display: block;
+            margin: 10px auto;
             border-radius: 8px;
+        }
+        .button-container {
+            text-align: center; /* Center button */
+            margin-top: 20px;
         }
         .button {
             display: inline-block;
-            padding: 10px 20px;
             background-color: #1c0bb1;
             color: white;
+            padding: 10px 20px;
             text-decoration: none;
             border-radius: 8px;
-            margin-top: 20px;
-            font-size: 18px; /* Button text proportional to body text */
-            text-align: center;
+            font-size: 16px; /* Reduced button text size */
         }
         .button:hover {
             background-color: #144098;
@@ -64,58 +77,62 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Join Us at World Health Assembly (WHA78)</h1>
-        <h2 class="subtitle">Securing the Future of Global Health – United Front for Sustainable Financing</h2>
-        <img src="https://i.imgur.com/0GM6DJE.jpeg" alt="Event 1" class="image">
-        <p>With shifting donor priorities and growing funding uncertainties, essential health programs—including those tackling infectious diseases, NCDs, maternal and child health, and health system strengthening—face increasing challenges. Now more than ever, sustainable financing mechanisms are needed to ensure long-term investments in global health, including those that spur the development of new tools and strengthen the research ecosystem, saving lives, and bringing wider economic benefits.</p>
-        <p><strong>Objectives:</strong></p>
-        <ul>
-            <li>Discuss the changing global health financing landscape and risks posed by declining donor funding.</li>
-            <li>Explore innovative financing models (blended finance, public-private partnerships, catalytic funding).</li>
-            <li>IDA is convening key stakeholders to advance the outcomes of this discussion through the Global Health Financing Coalition—a platform dedicated to driving sustainable investments in global health. If you're interested in joining, please reach out.</li>
-        </ul>
-        <p><strong>Details:</strong></p>
-        <ul>
-            <li><strong>📅 Date:</strong> May 21, 2025</li>
-            <li><strong>🕙 Time:</strong> 10:20 – 12:00 CEST (with access to the room 20 minutes before start)</li>
-            <li><strong>📍 Location:</strong> Civil Society Networking Space, Salle Nyon, 9–11 Rue de Varembé, 1211 Geneva 20</li>
-        </ul>
-        <a href="https://www.id-alliance.org/event-details/wha78-side-event-securing-the-future-of-global-health-united-front-for-sustainable-financing" class="button">Register Here</a>
-    </div>
+    <table width="100%" style="background-color: #1c0bb1;">
+        <tr>
+            <td align="center">
+                <table class="content">
+                    <tr>
+                        <td>
+                            <h1>Join Us at World Health Assembly (WHA78)</h1>
+                            <h2>Securing the Future of Global Health – United Front for Sustainable Financing</h2>
+                            <img src="https://i.imgur.com/0GM6DJE.jpeg" alt="Finance Event">
+                            <p>With shifting donor priorities and growing funding uncertainties, essential health programs—including those tackling infectious diseases, NCDs, maternal and child health, and health system strengthening—face increasing challenges. Now more than ever, sustainable financing mechanisms are needed to ensure long-term investments in global health, including those that spur the development of new tools and strengthen the research ecosystem, saving lives, and bringing wider economic benefits.</p>
+                            <p><strong>Objectives:</strong></p>
+                            <ul>
+                                <li>Discuss the changing global health financing landscape and risks posed by declining donor funding.</li>
+                                <li>Explore innovative financing models (blended finance, public-private partnerships, catalytic funding).</li>
+                                <li>IDA is convening key stakeholders to advance the outcomes of this discussion through the Global Health Financing Coalition—a platform dedicated to driving sustainable investments in global health. If you're interested in joining, please reach out.</li>
+                            </ul>
+                            <p><strong>Details:</strong></p>
+                            <ul class="no-bullet">
+                                <li>📅 <strong>Date:</strong> May 21, 2025</li>
+                                <li>🕙 <strong>Time:</strong> 10:20 – 12:00 CEST (with access to the room 20 minutes before start)</li>
+                                <li>📍 <strong>Location:</strong> Civil Society Networking Space, Salle Nyon, 9–11 Rue de Varembé, 1211 Geneva 20</li>
+                            </ul>
+                            <div class="button-container">
+                                <a href="https://www.id-alliance.org/event-details/wha78-side-event-securing-the-future-of-global-health-united-front-for-sustainable-financing" class="button">Register Here</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
     <script>
-      window.addEventListener('DOMContentLoaded', function () {
-        // Optional delay (1 second)
-        setTimeout(function () {
-          if (confirm("Would you like to copy the entire page content (with formatting and images) to your clipboard?\nYou can then paste it directly into your email.")) {
+        window.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                if (confirm("Would you like to copy the entire page content (with formatting and images) to your clipboard?\nYou can then paste it directly into your email.")) {
+                    const elementToCopy = document.body; 
+                    const htmlContent = elementToCopy.innerHTML;
 
-            // --- SELECT THE ENTIRE BODY ELEMENT ---
-            const elementToCopy = document.body; // Directly use document.body
+                    try {
+                        const blob = new Blob([htmlContent], { type: 'text/html' });
+                        const clipboardItem = new ClipboardItem({ 'text/html': blob });
 
-            // Get the HTML content *inside* the body
-            const htmlContent = elementToCopy.innerHTML;
-
-            // --- PREPARE DATA FOR MODERN CLIPBOARD API ---
-            try {
-              const blob = new Blob([htmlContent], { type: 'text/html' });
-              const clipboardItem = new ClipboardItem({ 'text/html': blob });
-
-              // --- WRITE TO CLIPBOARD ---
-              navigator.clipboard.write([clipboardItem]).then(function() {
-                // Success feedback
-                alert("Entire page content copied with formatting! You can now paste it into your email.");
-              }).catch(function(err) {
-                // Error feedback
-                console.error('Failed to copy HTML to clipboard: ', err);
-                alert("Sorry, couldn't automatically copy the page content with formatting. You might need to manually select everything (Ctrl+A or Cmd+A) and copy (Ctrl+C or Cmd+C).");
-              });
-            } catch (error) {
-               console.error('Error preparing content for clipboard: ', error);
-               alert("Sorry, your browser might not support copying rich content this way. Please manually select everything (Ctrl+A or Cmd+A) and copy (Ctrl+C or Cmd+C).");
-            }
-          }
-        }, 1000); // End of setTimeout
-      }); // End of DOMContentLoaded listener
+                        navigator.clipboard.write([clipboardItem]).then(function() {
+                            alert("Entire page content copied with formatting! You can now paste it into your email.");
+                        }).catch(function(err) {
+                            console.error('Failed to copy HTML to clipboard: ', err);
+                            alert("Sorry, couldn't automatically copy the page content with formatting. You might need to manually select everything (Ctrl+A or Cmd+A) and copy (Ctrl+C or Cmd+C).");
+                        });
+                    } catch (error) {
+                        console.error('Error preparing content for clipboard: ', error);
+                        alert("Sorry, your browser might not support copying rich content this way. Please manually select everything (Ctrl+A or Cmd+A) and copy (Ctrl+C or Cmd+C).");
+                    }
+                }
+            }, 1000);
+        });
     </script>
 </body>
 </html>
